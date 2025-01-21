@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <header>
+
+        <section>
+            <h1>
+                Amanda Lyckenius
+
+            </h1>
+        </section>
+
+        <nav id="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About me</a>
+            <a href="skills.html">Technical knowlege</a>
+            <a href="cv.html">Previous experiences</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="hamburger-icon">☰</button>
+
+    </header>
+
+    <!--- Meny som endast syns på mindre enheter-->
+
+    <nav id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="skills.html">Technical knowledge</a>
+        <a href="cv.html">Previous experiences</a>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+
+    <main class="bg-page">
+
+        <section class="posititon-center contact-page">
+
+            <h2>Feel free to contact me using the form below</h2>
+
+            <form action="/submit" method="post" class="form">
+
+                <label for="name" class="label">Name:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="email" class="label">Email:</label>
+                <input type="text" name="email" id="email">
+
+                <label for="subject" class="label">Subject:</label>
+                <input type="text" name="subject" id="subject">
+
+                <label for="message" class="label">Message:</label>
+                <textarea name="message" id="message" rows="4" cols="50"></textarea>
+
+                <p class="text-integretypolicy">Information text about privacy policy</p>
+                <input type="checkbox" id="integritypolicy" name="integritypolicy" value="integritypolicy">
+                <label for="integritypolicy" class="label">Accept</label>
+
+                <input type="submit" value="Send" class="send-button">
+
+            </form>
+
+            <h2 class="contact-subheadline">or through one of the following options</h2>
+
+            <section class="contact-links">
+                <a href="tel:+46704828044">Telephone</a>
+                <a href="mailto:alyckenius@gmail.com">Mail</a>
+                <a href="https://github.com/AmandaLyckenius" target="_blank">Github</a>
+
+            </section>
+
+
+
+
+
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Amanda Lyckenius 2025</p>
+        <a href="https://github.com/AmandaLyckenius" target="_blank">Github</a>
+        <a href="mailto:alyckenius@gmail.com">Mail</a>
+    </footer>
+
+
+
+
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

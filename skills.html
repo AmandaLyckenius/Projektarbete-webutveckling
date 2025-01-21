@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical knowledge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   
+    <header>
+
+        <section>
+            <h1>
+                Amanda Lyckenius
+
+            </h1>
+        </section>
+
+        <nav id="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About me</a>
+            <a href="skills.html">Technical knowlege</a>
+            <a href="cv.html">Previous experiences</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="hamburger-icon">☰</button>
+
+    </header>
+
+    <!--- Meny som endast syns på mindre enheter-->
+
+    <nav id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="skills.html">Technical knowledge</a>
+        <a href="cv.html">Previous experiences</a>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <main class="bg-page">
+
+        <h2 class="tech-text">Tekniska kunskaper</h2>
+
+        <section class="filter-skills">
+            <label for="tech-skills" class="label">Filter</label>
+                <select name="tech-skills" id="tech-skills">
+                    <option value="java">Java</option>
+                    <option value="unit tests">Unit tests</option>
+                    <option value="database management">Database management</option>
+                    <option value="version control">Version control</option>
+                    <option value="web development">Web development</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="code optimization">Code Optimization</option>
+                </select>
+        </section>
+
+        <section class="tech-main-page">
+
+            <article class="tech-box">
+                <img src="pictures/computer-photo.jpg" class="tech-picture"
+                    srcset="pictures/computer-photo-small.jpg 500w, pictures/computer-photo-big.jpg 1000w"
+                    sizes="(max-width:600px) 500px, 1000px"
+                    alt="A picture of a comuputer that is standing on a wooden board on a soft surface">
+
+                    <h2 class="tech-headline">Java Programming and Object-Oriented Development</h2>
+                    <p class="description">
+                        I have in-depth knowledge of Java and excel at creating stable, secure, and scalable Java applications.
+                        By applying object-oriented programming principles, I've developed applications with a focus on inheritance,
+                        aggregation, associations, and design patterns.
+                        I'm also experienced in writing and running unit tests to ensure code quality and functionality.
+                    </p>
+
+            </article>
+
+            <article class="tech-box">
+                <img src="pictures/database-photo.jpg" class="tech-picture"
+                    srcset="pictures/database-photo-small.jpg 500w, pictures/database-photo-big.jpg 1000w"
+                    sizes="(max-width:600px) 500px, 1000px"
+                    alt="A picture of a computer with floating subjects coming out of the frame, in pink colors">
+
+
+                    <h2 class="tech-headline">Database Management</h2>
+                    <p class="description">
+                        I have experience in designing and implementing both relational and NoSQL databases.
+                        I can normalize databases to optimize structure and performance, as well as create complex SQL queries
+                        to manage data.
+                        Furthermore, I have experience integrating Java applications with databases using JDBC, 
+                        enabling stable and secure communication between the application and the database.
+                    </p>
+
+            </article>
+
+            <article class="tech-box">
+
+                <img src="pictures/kodoptimering.jpeg" class="tech-picture"
+                    srcset="pictures/kodoptimering-small.jpeg 500w, pictures/kodoptimering-big.jpeg 1000w"
+                    sizes="(max-width:600px) 500px, 1000px" alt="A picture with code written in different colors">
+
+
+                <h2 class="tech-headline">Problem Solving and Code Optimization</h2>
+                <p class="description">
+                    I have experience troubleshooting and optimizing code to achieve better performance
+                    and stability in applications.
+                    With a methodical and analytical approach, I can effectively identify and resolve issues.
+                    I'm used to working with requirement specifications and quality standards to deliver solutions
+                    that meet both technical and user-centric needs.
+                </p>
+
+            </article>
+
+            <article class="tech-box">
+
+                <img src="pictures/github.jpeg" class="tech-picture"
+                    srcset="pictures/github-small.jpeg 500w, pictures/github-big.jpeg 1000w"
+                    sizes="(max-width:600px) 500px, 1000px"
+                    alt="A picture of a computer with the words 'where the world builds software' written on it">
+
+
+                    <h2 class="tech-headline">Version Control and Collaboration with Git and GitHub</h2>
+                    <p class="description">
+                        During my studies, I learned how to use Git for version control and to work with GitHub as a 
+                        collaborative platform in development projects. I'm accustomed to systematically managing code changes, 
+                        creating commits, and handling branches, which enables me to work efficiently both independently and in a team.
+                    </p>
+
+            </article>
+
+            <article class="tech-box">
+
+                <img src="pictures/design.jpeg" class="tech-picture"
+                    srcset="pictures/design-small.jpeg 500w, pictures/design-big.jpeg 1000w"
+                    sizes="(max-width:600px) 500px, 1000px"
+                    alt="A picture in pink with six floating objects in different colors.">
+
+                    <h2 class="tech-headline">Web Development</h2>
+                    <p class="description">
+                        I have the skills to build user-friendly and responsive websites with high accessibility that follow industry standards.
+                        By combining HTML, CSS, and JavaScript, I can create functional and aesthetically pleasing solutions.
+                        I also have experience working with design mockups and style sheets, as well as validating and troubleshooting websites
+                        to ensure high quality and compatibility.
+                    </p>
+
+            </article>
+
+
+
+
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <p>Amanda Lyckenius 2025</p>
+        <a href="https://github.com/AmandaLyckenius" target="_blank">Github</a>
+        <a href="mailto:alyckenius@gmail.com">Mail</a>
+    </footer>
+
+
+
+
+
+
+    <script src="js/app.js"></script>
+    <script src="js/skills.js"></script>
+</body>
+
+</html>

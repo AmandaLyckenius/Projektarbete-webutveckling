@@ -1,0 +1,400 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    z-index: 999;           /*Ska ligga över allt annat på sidan*/
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.posititon-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Navigering*/
+#desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#desktop-menu a,
+#mobile-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+#desktop-menu a:hover,
+#mobile-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+}
+
+#mobile-menu {
+    position: fixed;        /* Placerar mobil-menyn under fixerade headern (som är ca 60px hög*/
+    top: 60px;
+    width: 100%;
+    z-index: 1000;
+    display: none;           /* Gör att menyn intitalt inte visas */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    height: 0;               /* Stänger menyn */
+    overflow: hidden;       /* Ser till att den inte syns när height är 0 */
+    transition: height 0.3s ease;
+    padding: 0 20px;
+    
+}
+
+
+/* När active klassen läggs till genom JS blir den synlig mha display:flex och height */
+#mobile-menu.active {
+    display: flex;
+    height: 205px;
+    padding: 10px 20px;
+}
+
+
+
+/*Bakgrundsbild */
+.main-page {
+    background-image: url('../pictures/poppy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative; /* Gör det möjligt att placera andra element som absolut */
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+.main-page::before {
+    /*Lägger på estetiskt overlay på bakgrundsbilden*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Svart overlay med 50% opacitet */
+    z-index: 1;
+}
+
+.bg-page {          /*Bakgrundsbild utan overlay som används på alla utom startsidan*/
+    background: url('../pictures/poppy.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px;
+}
+
+/*Startsida*/
+.front-page-text {
+    position: absolute;      /* Placerar texten över bilden */
+    top: 50%;           
+    left: 50%;              /* placerar texten i mitten */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+    color: white;
+}
+
+
+/*Om mig sida*/
+.about-page {
+    display: flex;
+    width: 75%;
+    gap: 40px;
+    padding: 20px;
+    color: white;
+    background:rgba(0, 0, 0, 0.8);
+    border-radius: 2%;
+
+}
+
+.profile-picture {
+    width: 200px;
+    height: auto;
+    border-radius: 2%;
+    z-index: 3;
+}
+
+
+
+
+/*Teknik page*/
+.tech-main-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tech-text {
+    text-align: center;
+    color: black;
+}
+
+.tech-box {
+    flex: 0 0 calc(33.33% - 40px);
+    /*Gör att containrarna placeras bredvid varandra och tar upp allt utrymme minus 40 px(som är padding)*/
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1%;
+    text-align: center;
+    color: white;
+}
+
+.tech-picture {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.filter-skills {
+    color: black;
+    text-align: end;
+    padding: 10px;
+}
+
+
+/*CV-page*/
+
+.cv-text-box {
+    z-index: 3;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cv-article {
+    background:  rgba(0, 0, 0, 0.7);
+    color: white;    
+}
+
+.cv-headline {
+    text-align: center;
+    color: black;
+}
+
+.cv-subheadline{
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+/*Contact page*/
+.contact-page {
+    flex-direction: column;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background:  rgba(0, 0, 0, 0.7);
+    border-radius: 3%;
+    max-width: 100%;
+    color: white;
+
+}
+
+.label,
+.text-integretypolicy {
+    padding: 10px;
+}
+
+form input,
+form textarea {
+    margin: 0 15px;
+}
+
+.contact-subheadline{
+    background:  rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 1.0em;
+}
+
+.contact-links {
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    background:  rgba(0, 0, 0, 0.7);
+    border-radius: 5%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-links a:hover {
+    background-color: rgb(160, 164, 160);
+}
+
+.send-button {
+    max-width: 20%; 
+    display: block; /*Knappen blir centrerad horisontellt*/
+    margin: 20px auto;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #f5f6f8;
+    border: none;
+    border-radius: 5%;
+
+}
+
+.send-button:hover {
+    background-color: rgb(160, 164, 160);
+}
+
+
+
+
+
+
+/*Footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #12151c;
+    padding: 20px;
+}
+
+footer a,
+footer p {
+    color: white;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/*SMÅ ENHETER*/
+
+@media (max-width: 768px) {
+
+    .bg-page {
+        padding: 67.33px 0px;
+        /*Tar bort padding på sidorna för att fylla ut skärmen helt*/
+    }
+
+    /*När bredden på skärmen är under 768 px gömms menyn för större skärmar */
+    #desktop-menu {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #mobile-menu {
+        display: none;       /* Döljer menyn när den inte är aktiv */
+    }
+
+    .front-page-text {
+        font-size: 0.9rem;   /* Anpassar textstorleken på mindre skärmar */
+        padding: 10px;
+    }
+
+    /*Om mig*/
+    .about-page {
+        flex-direction: column;
+        width: 90%;
+        padding: 0px;
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: auto;
+        padding-top: 60px;
+    }
+
+    .about-me-text {
+        padding: 10px;
+    }
+
+
+    /*Tekniska kunskaper*/
+
+    .filter-skills {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .tech-main-page {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .tech-picture {
+        width: 100%;
+    }
+
+    .description {
+        padding: 10px;
+    }
+
+
+   
+
+
+
+}
